@@ -40,11 +40,13 @@ defined( 'ABSPATH' ) || exit;
 		<?php else : ?>
 
 			<div class="thankyou-full-width-modal">
-				<a href="javascript:;" class="thankyou-modal-close">X</a>
+				<a href="javascript:;" class="thankyou-modal-close"></a>
 				<div class="thankyou-modal-content">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green-right.png" />
 					<h2>Thank you!</h2>
 					<p>Your order was completed successfully.</p>
 					<span>Order number is: <?php echo $order->get_id(); ?></span>
+					<a href="<?php home_url() ?>" class="bt-home">Back to home page</a>
 				</div>
 			</div>
 

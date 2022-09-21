@@ -7,35 +7,96 @@ Version: 1.0.0
 /* Thankyou Page */
 
 .thankyou-full-width-modal {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  z-index: 9999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 9999999;
 }
 
 .thankyou-modal-close {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 
 .thankyou-modal-content {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 40%;
-  transform: translate(50%, -50%);
-  text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 40%;
+    transform: translate(50%, -50%);
+    text-align: center;
 }
 
 .thankyou-full-width-modal.close-modal {
-	position: unset;
-	display: none;
+    position: unset;
+    display: none;
+}
+
+
+.thankyou-modal-close:before,
+.thankyou-modal-close:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 25px;
+    background: #000000;
+    top: 6px;
+}
+
+.thankyou-modal-close:before {
+
+    transform: rotate(45deg);
+    right: 20px;
+}
+
+.thankyou-modal-close:after {
+
+    transform: rotate(-45deg);
+    right: 20px;
+}
+
+.thankyou-modal-content h2 {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 58px;
+    margin: 40px 0 15px 0;
+}
+
+.thankyou-modal-content p {
+    font-family: Sofia Pro;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 26px;
+}
+
+
+.thankyou-modal-content span {
+    display: block;
+}
+
+.bt-home {
+    display: inline-block;
+    margin: 40px;
+    background: #000;
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.bt-home:hover {
+    color: #000;
+    background: transparent;
+    border: 1px solid #000;
 }
