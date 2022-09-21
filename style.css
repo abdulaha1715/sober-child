@@ -4,6 +4,94 @@ Template: sober
 Version: 1.0.0
 */
 
+/* Checkout Page */
+.woocommerce-checkout div#customer_address_details h3 {
+    display: none;
+}
+
+.woocommerce-checkout div#customer_address_details h3.border_html {}
+
+.woocommerce-checkout h3.border_html {
+    color: #ffffff !important;
+    display: block !important;
+    padding: 8px 0 8px 40px !important;
+    margin: 0;
+    position: relative;
+    border: none !important;
+    border-radius: 4px;
+    margin-bottom: 25px !important;
+}
+
+.woocommerce-checkout h3.border_html:after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 6px;
+    left: 8px;
+    font-size: 14px;
+    color: #77B0EB;
+    font-family: sans-serif;
+}
+
+div#customer_address_details {}
+
+.woocommerce-checkout div#customer_address_details h3.border_html:after {
+    content: "1";
+    padding: 3px 8px;
+}
+
+.woocommerce-checkout div#cclw_payment_section h3.border_html:after {
+    content: "2";
+    padding: 3px 9px;
+}
+
+.woocommerce-checkout div#cclw_order_details_table h3.border_html:after {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    padding: 3px 6px;
+}
+
+.woocommerce-checkout .checkout-three-column-layout h3.border_html:before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 20px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 16px solid #77B0EB;
+}
+
+.woocommerce-checkout #cclw_billing_section h3.border_html::after {
+    content: "3";
+    padding: 3px 8px;
+}
+
+.woocommerce-privacy-policy-text {
+    display: none;
+}
+
+ul.wc_payment_methods.payment_methods.methods {
+    border-bottom: none !important;
+}
+
+.woocommerce-checkout-payment .form-row.place-order {
+    margin: 0 !important;
+}
+
+div#cclw_payment_section {
+    margin-bottom: 20px;
+}
+
+#customer_address_details #ship-to-different-address {
+    display: block;
+}
+
+.woocommerce-checkout-review-order-table .removepro {
+    display: none;
+}
+
 /* Thankyou Page */
 
 .thankyou-full-width-modal {
