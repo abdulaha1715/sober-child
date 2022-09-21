@@ -4,3 +4,38 @@ Template: sober
 Version: 1.0.0
 */
 
+/* Thankyou Page */
+
+.thankyou-full-width-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999999;
+}
+
+.thankyou-modal-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.thankyou-modal-content {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 40%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+
+.thankyou-full-width-modal.close-modal {
+	position: unset;
+	display: none;
+}

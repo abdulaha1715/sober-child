@@ -39,6 +39,15 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
+			<div class="thankyou-full-width-modal">
+				<a href="javascript:;" class="thankyou-modal-close">X</a>
+				<div class="thankyou-modal-content">
+					<h2>Thank you!</h2>
+					<p>Your order was completed successfully.</p>
+					<span>Order number is: <?php echo $order->get_id(); ?></span>
+				</div>
+			</div>
+
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
