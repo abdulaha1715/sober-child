@@ -27,9 +27,12 @@ function beibi_email_first( $checkout_fields ) {
 	$checkout_fields['billing']['billing_address_2']['priority'] = 23;
 	$checkout_fields['billing']['billing_city']['priority']      = 24;
 	$checkout_fields['billing']['billing_country']['priority']   = 75;
+
+   $checkout_fields['billing']['billing_first_name']['label']   = "First Name";
+
 	return $checkout_fields;
 }
-add_filter( 'woocommerce_checkout_fields', 'beibi_email_first' );
+add_filter( 'woocommerce_checkout_fields', 'beibi_email_first', 999 );
 
 /**
  * Hide the Company Name Field from the Checkout Page
@@ -81,4 +84,7 @@ remove_action('woocommerce_checkout_terms_and_conditions','wc_checkout_privacy_p
 remove_action('woocommerce_checkout_terms_and_conditions','wc_terms_and_conditions_page_content', 30);
 add_action('woocommerce_checkout_after_terms_and_conditions','wc_checkout_privacy_policy_text');
 add_action('woocommerce_checkout_after_terms_and_conditions','wc_terms_and_conditions_page_content');
+
+
+
 

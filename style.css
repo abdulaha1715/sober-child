@@ -1,7 +1,7 @@
 /*
 Theme Name: Sober-Child
 Template: sober
-Version: 1.0.0
+Version: 99.99.99
 */
 
 /* Checkout Page */
@@ -197,4 +197,49 @@ div#cclw_payment_section {
         width: 85%;
     }
 
+}
+
+
+/* Order note style */
+
+.woocommerce-additional-fields__field-wrapper p#order_comments_field {
+    padding-left: 0px !important;
+    margin: 0px !important;
+}
+
+/* Place order button style */
+input#place_order {
+    width: 100%;
+    line-height: 3;
+    background-color: #FF5317;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+/*Coupon code*/
+form.checkout_coupon > p.form-row.form-row-first {
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+form.checkout_coupon > p.form-row.form-row-last {
+    padding: 0px !important;
+    margin-top: 10px !important;
+    width: 100%;
+}
+
+form.checkout_coupon > button.button {
+    line-height: 3 !important;
+}
+
+/*Order detail*/
+#cclw_order_details_table .cclw_order_review_table table th {
+    
+    padding: 2px !important;
+}
+
+/*For last name*/
+p#billing_last_name_field>label {
+    display: block !important;
 }
