@@ -20,6 +20,7 @@ Version: 99.99.99
     border: none !important;
     border-radius: 4px;
     margin-bottom: 25px !important;
+    background-color:#1e85be;
 }
 
 .woocommerce-checkout h3.border_html:after {
@@ -31,7 +32,7 @@ Version: 99.99.99
     top: 6px;
     left: 8px;
     font-size: 14px;
-    color: #77B0EB;
+    color: #1e85be;
     font-family: sans-serif;
 }
 
@@ -60,14 +61,13 @@ div#customer_address_details {}
     left: 20px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 16px solid #77B0EB;
+    border-top: 16px solid #1e85be;
 }
 
 .woocommerce-checkout #cclw_billing_section h3.border_html::after {
     content: "3";
     padding: 3px 8px;
 }
-
 .woocommerce-privacy-policy-text {
     display: none;
 }
@@ -221,6 +221,7 @@ input#place_order {
 form.checkout_coupon > p.form-row.form-row-first {
     padding-left: 0px !important;
     margin-bottom: 0px !important;
+    padding-right: 0 !important;
 }
 
 form.checkout_coupon > p.form-row.form-row-last {
@@ -239,8 +240,22 @@ form.checkout_coupon > button.button {
     padding: 2px !important;
 }
 
+
 /*For last name*/
-p#billing_last_name_field>label {
+p#billing_first_name_field,
+p#shipping_first_name_field{
+    width: 49% !important;
+    margin-right: 2% !important;
+    display: grid !important;
+}
+
+p#billing_last_name_field,
+p#shipping_last_name_field{
+    width: 49% !important;
+}
+
+p#billing_last_name_field label,
+p#shipping_last_name_field label{
     display: block !important;
 }
 
@@ -273,4 +288,53 @@ p.form-row.terms.wc-terms-and-conditions.open label:before {
 
 p.form-row.terms.wc-terms-and-conditions.open label:after {
     border-color: #23232c;
+}
+
+#customer_address_details h3#ship-to-different-address>label {
+    font-size: 1.6rem !important;
+}
+.woocommerce-terms-and-conditions-wrapper {
+    /*display: none;*/
+}
+
+.woocommerce-checkout form.checkout .form-row-first {
+    width: 100% !important;
+    padding-right: 25px;
+}
+
+fieldset#wc-stripe-cc-form .form-row.form-row-last {
+    width: 100% !important;
+    padding-top: 0px;
+}
+
+td.thumb div {
+    line-height: 1.2;
+}
+
+div#cclw_billing_section {
+    padding: 10px;
+}
+
+/*Coupon style*/
+form.checkout_coupon.woocommerce-form-coupon > p.form-row.form-row-last > button.button {
+    width: 100% !important;
+    padding: 0;
+    line-height: 3;
+    background: #FF5317 !important;
+}
+
+form.checkout_coupon.woocommerce-form-coupon > p.form-row.form-row-first {
+    padding-right: 0 !important;
+}
+
+
+/*secure_checkout*/
+h2.secure_checkout {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+h2.secure_checkout img {
+    width: 45px;
+    height: auto;
 }
