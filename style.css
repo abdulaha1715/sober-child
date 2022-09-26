@@ -243,3 +243,34 @@ form.checkout_coupon > button.button {
 p#billing_last_name_field>label {
     display: block !important;
 }
+
+div#cclw_additional_fields {}
+
+div#cclw_additional_fields .woocommerce-additional-fields {
+    padding: 0 !important;
+}
+
+div#cclw_additional_fields .woocommerce-additional-fields__field-wrapper {
+    padding: 0 !important;
+}
+
+.cart_totals.cclw_cart_totals p.form-row.terms.wc-terms-and-conditions {
+    padding: 10px !important;
+    margin: 0;
+}
+
+.cart_totals.cclw_cart_totals {}
+
+input#place_order {
+    margin: 0px 0 0 10px !important;
+    width: 98% !important;
+}
+
+p.form-row.terms.wc-terms-and-conditions.open label:before {
+    border-color: #23232c;
+    background-color: #fff;
+}
+
+p.form-row.terms.wc-terms-and-conditions.open label:after {
+    border-color: #23232c;
+}
