@@ -6,9 +6,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
  * script load
  */ 
 function child_sober_scripts() {
-   wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.00' );
+   wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.03450' );
     
-   wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '1.0.00645000', true );
+   wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '1.0.05000', true );
 }
 add_action( 'wp_enqueue_scripts', 'child_sober_scripts' );
 
@@ -75,6 +75,11 @@ function zn_kc_move_terms_and_conditions()
       <label for="terms" class="checkbox"><?php printf( __( 'I&rsquo;ve read and accept the <a href="%s" target="_blank">terms &amp; conditions</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'terms' ) ) ); ?> <span class="required">*</span></label>
       <input type="hidden" name="terms-field" value="1" />
    </p>
+   <script>
+      jQuery(".checkbox").click(function(){
+         jQuery(".wc-terms-and-conditions").toggleClass("open");
+      });
+   </script>
    <?php
 }
 add_action('woocommerce_review_order_after_order_total', 'zn_kc_move_terms_and_conditions', 25);

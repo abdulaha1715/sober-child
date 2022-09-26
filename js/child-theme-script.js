@@ -6,8 +6,9 @@
 			jQuery(".thankyou-full-width-modal").toggleClass("close-modal");
 		});
 		
-		jQuery(".wc-terms-and-conditions").click(function(){
-			jQuery(".wc-terms-and-conditions").toggleClass("open");
+		jQuery(".checkbox").click(function(){
+			// jQuery(".wc-terms-and-conditions").toggleClass("open");
+			alert("Ok");
 		});
         
         jQuery(".cclwplus").click(function() {

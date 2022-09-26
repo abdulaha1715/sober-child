@@ -278,7 +278,7 @@ div#cclw_additional_fields .woocommerce-additional-fields__field-wrapper {
 
 input#place_order {
     margin: 0px 0 0 10px !important;
-    width: 98% !important;
+    width: 96% !important;
 }
 
 p.form-row.terms.wc-terms-and-conditions.open label:before {
@@ -294,7 +294,7 @@ p.form-row.terms.wc-terms-and-conditions.open label:after {
     font-size: 1.6rem !important;
 }
 .woocommerce-terms-and-conditions-wrapper {
-    /*display: none;*/
+    display: none;
 }
 
 .woocommerce-checkout form.checkout .form-row-first {
