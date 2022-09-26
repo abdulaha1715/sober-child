@@ -6,8 +6,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
  * script load
  */ 
 function child_sober_scripts() {
-	wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), the_time() );
-	wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '', true );
+   wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.00' );
+    
+   wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '1.0.00645000', true );
 }
 add_action( 'wp_enqueue_scripts', 'child_sober_scripts' );
 
@@ -21,25 +22,24 @@ add_action( 'woocommerce_review_order_after_order_total_coupon', 'woocommerce_ch
  * serialize woocommerce checkout fields
  */ 
 function beibi_email_first( $checkout_fields ) {
-	$checkout_fields['billing']['billing_email']['priority']     = 20;
-	$checkout_fields['billing']['billing_phone']['priority']     = 21;
-	$checkout_fields['billing']['billing_address_1']['priority'] = 22;
-	$checkout_fields['billing']['billing_address_2']['priority'] = 23;
-	$checkout_fields['billing']['billing_city']['priority']      = 24;
-	$checkout_fields['billing']['billing_country']['priority']   = 75;
+   $checkout_fields['billing']['billing_email']['priority']     = 20;
+   $checkout_fields['billing']['billing_phone']['priority']     = 21;
+   $checkout_fields['billing']['billing_address_1']['priority'] = 22;
+   $checkout_fields['billing']['billing_address_2']['priority'] = 23;
+   $checkout_fields['billing']['billing_city']['priority']      = 24;
+   $checkout_fields['billing']['billing_country']['priority']   = 75;
 
-   $checkout_fields['billing']['billing_first_name']['label']   = "First Name";
-
-	return $checkout_fields;
+   // $checkout_fields['billing']['billing_first_name']['label']   = "Hello";
+   return $checkout_fields;
 }
-add_filter( 'woocommerce_checkout_fields', 'beibi_email_first', 999 );
+add_filter( 'woocommerce_checkout_fields', 'beibi_email_first' );
 
 /**
  * Hide the Company Name Field from the Checkout Page
  */ 
 function remove_company_name( $fields ) {
-	unset($fields['billing']['billing_company']);
-	return $fields;
+   unset($fields['billing']['billing_company']);
+   return $fields;
 }
 add_filter( 'woocommerce_checkout_fields' , 'remove_company_name' );
 
@@ -65,6 +65,8 @@ add_filter('woocommerce_order_button_html', 'remove_woocommerce_order_button_htm
 /**
  * Moving Terms and Conditions checkbox above Payments
  */ 
+
+ 
 function zn_kc_move_terms_and_conditions()
 {
    ?>
@@ -87,4 +89,10 @@ add_action('woocommerce_checkout_after_terms_and_conditions','wc_terms_and_condi
 
 
 
-
+function fun_hide_view_details($plugin_meta, $plugin_file, $plugin_data, $status)
+{
+   if($plugin_data['slug'] == 'custom-checkout-layouts-for-woocommerce')
+      unset($plugin_meta[2]);
+   return $plugin_meta;
+}
+add_filter('plugin_row_meta','fun_hide_view_details',10,4);
