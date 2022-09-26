@@ -6,9 +6,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
  * script load
  */ 
 function child_sober_scripts() {
-   wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.03450' );
+   wp_enqueue_style( 'child-sober', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.034545' );
     
-   wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '1.0.05000', true );
+   wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/child-theme-script.js', array('jquery'), '1.0.054500', true );
 }
 add_action( 'wp_enqueue_scripts', 'child_sober_scripts' );
 

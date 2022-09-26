@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 					<h2>Thank you!</h2>
 					<p>Your order was completed successfully.</p>
 					<span>Order number is: <?php echo $order->get_id(); ?></span>
-					<a href="<?php home_url() ?>" class="bt-home">Back to home page</a>
+					<a href="javascript: void(0)" class="bt-home bt-order-details">BACK TO ORDER DETAILS</a>
 				</div>
 			</div>
 
